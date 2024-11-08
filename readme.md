@@ -1,5 +1,7 @@
 **Status:** Maintenance (expect bug fixes and minor updates)\
-**Note:** SpinningUp works with Gymnasium can be found in branch [spinup_gymnasium](https://github.com/LinghengMeng/spinningup_gymnasium/tree/spinup_gymnasium).
+**Note:** 
+* SpinningUp works with [Gymnasium](https://gymnasium.farama.org/) can be found in branch [spinup_gymnasium](https://github.com/LinghengMeng/spinningup_gymnasium/tree/spinup_gymnasium).
+* SpinningUp works with [IsaacLab](https://isaac-sim.github.io/IsaacLab/main/index.html) can be found in branch [spinup_isaaclab](https://github.com/LinghengMeng/spinningup_gymnasium/tree/spinup_isaaclab).
 
 Welcome to Spinning Up in Deep RL! 
 ==================================
