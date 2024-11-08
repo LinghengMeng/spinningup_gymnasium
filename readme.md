@@ -1,4 +1,5 @@
-**Status:** Maintenance (expect bug fixes and minor updates)
+**Status:** Maintenance (expect bug fixes and minor updates)\
+**Note:** SpinningUp works with Gymnasium can be found in branch [spinup_gymnasium](https://github.com/LinghengMeng/spinningup_gymnasium/tree/spinup_gymnasium).
 
 Welcome to Spinning Up in Deep RL! 
 ==================================
