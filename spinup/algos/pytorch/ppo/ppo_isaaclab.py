@@ -55,13 +55,13 @@ import datetime
 import wandb
 if args_cli.task == 'Isaac-Cartpole-v0':
     config = {'task': 'Isaac-Cartpole-v0', 'hidden_sizes': [64, 64], 'seed': 0, 'gamma': 0.98, 'clip_ratio': 0.2, 'pi_lr': 1e-4,
-              'vf_lr': 1e-4, 'train_pi_iters': 5, 'train_v_iters': 5, 'lam': 0.95, 'target_kl': 0.01}
+              'vf_lr': 1e-4, 'train_pi_iters': 5, 'train_v_iters': 5, 'lam': 0.95, 'target_kl': 0.01, 'epochs': 500}
 elif args_cli.task == 'Isaac-Ant-v0':
     config = {'task': 'Isaac-Ant-v0', 'hidden_sizes': [64, 64], 'seed': 0, 'gamma': 0.98, 'clip_ratio': 0.2, 'pi_lr': 1e-4,
-              'vf_lr': 1e-4, 'train_pi_iters': 5, 'train_v_iters': 5, 'lam': 0.95, 'target_kl': 0.01}
+              'vf_lr': 1e-4, 'train_pi_iters': 5, 'train_v_iters': 5, 'lam': 0.95, 'target_kl': 0.01, 'epochs': 500}
 elif args_cli.task == 'Isaac-Lift-Cube-Franka-v0':
     config = {'task': 'Isaac-Ant-v0', 'hidden_sizes': [64, 64], 'seed': 0, 'gamma': 0.98, 'clip_ratio': 0.2, 'pi_lr': 1e-4,
-              'vf_lr': 1e-4, 'train_pi_iters': 5, 'train_v_iters': 5, 'lam': 0.95, 'target_kl': 0.01}
+              'vf_lr': 1e-4, 'train_pi_iters': 5, 'train_v_iters': 5, 'lam': 0.95, 'target_kl': 0.01, 'epochs': 500}
 else:
     raise ValueError('Configuration for {} is not specified!'.format(args_cli.task))
 
@@ -459,5 +459,5 @@ if __name__ == '__main__':
         train_v_iters = wandb.config.train_v_iters,
         lam = wandb.config.lam,
         target_kl = wandb.config.target_kl,
-        steps_per_epoch=args.steps, epochs=args.epochs,
+        steps_per_epoch=args.steps, epochs=wandb.config.epochs,
         logger_kwargs=logger_kwargs)

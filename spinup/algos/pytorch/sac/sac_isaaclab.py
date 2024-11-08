@@ -59,17 +59,17 @@ if args_cli.task == 'Isaac-Cartpole-v0':
     config = {'task': 'Isaac-Cartpole-v0', 'hidden_sizes': [64, 64], 'seed': 0, 'replay_size': int(1e6), 'gamma': 0.98, 
               'polyak': 0.995, 'lr': 1e-3, 'alpha': 0.2, 'batch_size': 100, 'start_steps': 10000, 
               'update_after': 1000, 'update_every': 50, 'num_test_episodes': 10,
-              "act_limit": 0.5}
+              "act_limit": 0.5, 'epochs': 500}
 elif args_cli.task == 'Isaac-Ant-v0':
     config = {'task': 'Isaac-Ant-v0', 'hidden_sizes': [64, 64], 'seed': 0, 'replay_size': int(1e6), 'gamma': 0.98, 
               'polyak': 0.995, 'lr': 1e-3, 'alpha': 0.2, 'batch_size': 100, 'start_steps': 10000, 
               'update_after': 1000, 'update_every': 50, 'num_test_episodes': 10,
-              "act_limit": 0.5}
+              "act_limit": 0.5, 'epochs': 500}
 elif args_cli.task == 'Isaac-Lift-Cube-Franka-v0':
     config = {'task': 'Isaac-Lift-Cube-Franka-v0', 'hidden_sizes': [64, 64], 'seed': 0, 'replay_size': int(1e6), 'gamma': 0.98, 
               'polyak': 0.995, 'lr': 1e-3, 'alpha': 0.2, 'batch_size': 100, 'start_steps': 10000, 
               'update_after': 1000, 'update_every': 50, 'num_test_episodes': 10,
-              "act_limit": 0.5}
+              "act_limit": 3.14, 'epochs': 500}
 else:
     raise ValueError('Configuration for {} is not specified!'.format(args_cli.task))
 
@@ -435,8 +435,6 @@ if __name__ == '__main__':
     parser.add_argument('--env', type=str, default='HalfCheetah-v2')
     parser.add_argument('--hid', type=int, default=256)
     parser.add_argument('--l', type=int, default=2)
-    parser.add_argument('--gamma', type=float, default=0.99)
-    parser.add_argument('--seed', '-s', type=int, default=0)
     parser.add_argument('--epochs', type=int, default=50)
     parser.add_argument('--exp_name', type=str, default='sac')
     args = parser.parse_args()
@@ -475,5 +473,5 @@ if __name__ == '__main__':
         update_every = wandb.config.update_every,
         num_test_episodes = wandb.config.num_test_episodes,
         act_limit=wandb.config.act_limit,
-        epochs=args.epochs,
+        epochs=wandb.config.epochs,
         logger_kwargs=logger_kwargs)
