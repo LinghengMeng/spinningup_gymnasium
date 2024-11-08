@@ -20,14 +20,15 @@ setup(
         'joblib',
         'matplotlib==3.1.1',
         'matplotlib',
-        'numpy==1.26.4',
+        'numpy==1.26.0',
         'pandas',
         'pytest',
         'psutil',
         'scipy',
         'seaborn==0.8.1',
         'torch==2.2.2',
-        'tqdm'
+        'tqdm',
+        'cli_args'
     ],
     description="Teaching tools for introducing people to deep RL.",
     author="Joshua Achiam",
