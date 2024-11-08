@@ -1,9 +1,11 @@
-# Installation
+This branch is to make SpinningUp work with Gymnasium and simplify it by removing mpi4py related code.
 
-`conda create -n spinup_env python=3.10`
-`conda activate spinup_env`
-`cd spinningup_gymnasium`
-`pip install -e .`
+# Installation
+The installation assumes you have conda installed.
+* `conda create -n spinup_env python=3.10`
+* `conda activate spinup_env`
+* `cd spinningup_gymnasium`
+* `pip install -e .`
 
 # Test installation
 * `python -m spinup.run ppo --env HalfCheetah-v4 --exp_name installtest_ppo`
@@ -19,10 +21,10 @@
 * tf1 related code is removed
 * gym is replaced with gymnasium
 
+#
 ++++++++++++++++++++++++++++++++++++++++++++++++++++\
-**Note:** The following content from the original repo is added as reference.
+**Note:** The following content from the original repo is kept as reference.
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 
 
 **Status:** Maintenance (expect bug fixes and minor updates)
