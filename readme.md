@@ -18,7 +18,7 @@ The installation assumes you have conda installed.
         * Add complimentery packages to conda environment
             * `./isaaclab.sh --conda spinup_env`
                 * Note: use the same virtual env for Spinup.
-        * Reactive virtula env: `conda activate spinup_env`
+        * Reactivate virtula env: `conda activate spinup_env`. Otherwise, it will promt `No module named 'omni.isaac.kit'`.
         * Install: `./isaaclab.sh --install`
     * Test IsaacLab installation: `./isaaclab.sh -p source/standalone/tutorials/00_sim/create_empty.py`
         * If you are remotely accessing your compute, add `--headless` to the argument as `./isaaclab.sh -p source/standalone/tutorials/00_sim/create_empty.py --headless`
@@ -44,6 +44,10 @@ The installation assumes you have conda installed.
 * mpi4py related code is removed
 * tf1 related code is removed
 * gym is replaced with gymnasium
+
+# TODO List
+* Replace the loger with wandb when working with IsaacLab.
+* Clean original arguments that are not used anymore.
 
 #
 ++++++++++++++++++++++++++++++++++++++++++++++++++++\
