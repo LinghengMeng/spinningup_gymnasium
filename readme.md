@@ -1,3 +1,30 @@
+# Installation
+
+`conda create -n spinup_env python=3.10`
+`conda activate spinup_env`
+`cd spinningup_gymnasium`
+`pip install -e .`
+
+# Test installation
+* `python -m spinup.run ppo --env HalfCheetah-v4 --exp_name installtest_ppo`
+    * Note: you can also run PPO with `python ./spinup/algos/pytorch/ppo/ppo.py --env HalfCheetah-v4 --exp_name installtest_ppo`
+* `python -m spinup.run ddpg --env HalfCheetah-v4 --exp_name installtest_ddpg`
+* `python -m spinup.run td3 --env HalfCheetah-v4 --exp_name installtest_td3`
+* `python -m spinup.run sac --env HalfCheetah-v4 --exp_name installtest_sac`
+* `python -m spinup.run vpg --env HalfCheetah-v4 --exp_name installtest_vpg`
+
+
+# Changes made compare to master branch of the original repo
+* mpi4py related code is removed
+* tf1 related code is removed
+* gym is replaced with gymnasium
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++\
+**Note:** The following content from the original repo is added as reference.
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
 **Status:** Maintenance (expect bug fixes and minor updates)
 
 Welcome to Spinning Up in Deep RL! 
