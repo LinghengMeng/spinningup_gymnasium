@@ -4,6 +4,7 @@ This branch is to make SpinningUp work with [Gymnasium](https://gymnasium.farama
 The installation assumes you have conda installed.
 * Install SpinningUp for Gymnasium:
     * `conda create -n spinup_env python=3.10`
+    * `git clone https://github.com/LinghengMeng/spinningup_gymnasium.git`
     * `conda activate spinup_env`
     * `cd spinningup_gymnasium`
     * `pip install -e .`
